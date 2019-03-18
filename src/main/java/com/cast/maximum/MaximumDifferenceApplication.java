@@ -5,12 +5,31 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.cast.maximum.functions.FunctionMaxDifference;
 
+/**
+ * 
+ * Classe principal do projeto Maximum Difference
+ *
+ * @author <a href="mailto:hcamposcruz@gmail.com">Hudson de Campos Cruz</a>.
+ * @version $Revision: 1.1 $
+ */
+
 @SpringBootApplication
 public class MaximumDifferenceApplication {
 
+	/**
+	 * 
+	 * Ponto de inicio da aplicação.
+	 *
+	 * @author <a href="mailto:hcamposcruz@gmail.com">Hudson de Campos Cruz</a>.
+	 * @param Valor dos parametros sao vazios 
+	 * void
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(MaximumDifferenceApplication.class, args);
 		
+		/*
+		 * Instanciando a variável
+		 */
 		FunctionMaxDifference funcaoMax = new FunctionMaxDifference();
 		
 		int resultado;
@@ -19,6 +38,9 @@ public class MaximumDifferenceApplication {
 		
 		System.out.println("Array : {7,2,3,10,2,4,8,1}");
 		
+		/*
+		 * Atribundo a variável o retorno da função
+		 */
 		resultado = funcaoMax.maxDifference(listagem1);
 		
 		if (resultado < 0) {

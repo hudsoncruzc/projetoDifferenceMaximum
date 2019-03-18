@@ -6,7 +6,15 @@ import java.util.List;
 
 public class FunctionMaxDifference {
 
-	
+	/**
+	 * 
+	 * Funcao maxDifference: retorna a maior difenrenca encontrada nos numeros informados no array de entrada
+	 *
+	 * @author <a href="mailto:hcamposcruz@gmail.com">Hudson de Campos Cruz</a>.
+	 * @param a : int Array
+	 * @return
+	 * int
+	 */
 	public static int maxDifference(int[] a) {
 		
 		// Criando o array
@@ -19,17 +27,19 @@ public class FunctionMaxDifference {
 			
 		}
 		
-		//
+		//for para percorrer o array
 		for (int i = 1; i < a.length ; i++) {
 			
 			for (int x = 1 ; x < i ; x++) {
+				//verifica se há diferencá
 				if (a[x] < a[i]) {
+					//adiciona neste array o valor da diferença
 					verificaLista.add(a[i] - a[x]);
 				}
 
 			}
 		}
-
+		//retorna a diferença de maior valor
 		return Collections.max(verificaLista);
 
 	}
